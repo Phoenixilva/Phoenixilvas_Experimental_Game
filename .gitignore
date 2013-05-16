@@ -140,6 +140,7 @@ csx
 AppPackages/
 
 # Others
+Experimental_Game/
 sql/
 *.Cache
 ClientBin/
