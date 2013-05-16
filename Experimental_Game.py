@@ -14,8 +14,10 @@ def doors(door):
 
         if bear == "1":
             print "The bear eats your face off. Good job!"
+            return quit_or_restart()
         elif bear == "2":
             print "The bear eats your legs off. Good job!"
+            return quit_or_restart()
         elif bear == "3":
             print "The bear dodges your stab! What do you do?"
             print "1. Stab again"
@@ -26,15 +28,17 @@ def doors(door):
 
             if fight == "1":
                 print "The bear eats your arms off. Good job!"
+                return quit_or_restart()
             elif fight == "2":
                 print "The bear swings at you and misses!"
                 return bear_misses()
             elif fight == "3":
                 print "The bear runs you down and eats your head off. Good Job!"
+                return quit_or_restart()
             else:
-                print "You stumble around and fall on a knife and die. Good job!"
+                return indecision_kills()
         else:
-            print "Well, doing %s is probably better. Bear runs away." % bear
+            return indecision_kills()
 
     elif door == "2":
         print "You stare into the endless abyss at Cthulhu's retina."
@@ -46,11 +50,13 @@ def doors(door):
 
         if insanity == "1" or insanity == "2":
             print "Your body survives powered by a mind of jello. Good job!"
+            return quit_or_restart()
         else:
             print "The insanity rots your eyes into a pool of muck. Good job!"
+            return quit_or_restart()
 
     else:
-        print "You stumble around and fall on a knife and die. Good job!"
+        return indecision_kills()
 
 def bear_misses():
     print "The bear missed! What do you do?"
@@ -65,10 +71,12 @@ def bear_misses():
         return killed_bear()
     elif bear_fight == "2":
         print "The bear looks at you quizzically, then rips your head off. Good job!"
+        return quit_or_restart()
     elif bear_fight == "3":
         print "The bear runs you down and eats your head off. Good job!"
+        return quit_or_restart()
     else:
-        print "You stumble around and fall on a knife and die. Good job!"
+        return indecision_kills()
 
 def killed_bear():
     print "You killed the bear. You notice a door on the other side. Do you:"
@@ -87,6 +95,7 @@ def killed_bear():
 
         if what_now == "1":
             print "A monster bites off your face. Good job!"
+            return quit_or_restart()
         elif what_now == "2":
             print "You went through the door."
         elif what_now == "3":
@@ -101,9 +110,29 @@ def killed_bear():
 
 def indecision_kills():
     print "You stumble around and fall on a knife and die. Good job!"
+    return quit_or_restart()
      
-print "You enter a dark room with two doors. Do you go through door #1 or door #2?"
+def start_game():
+    print "You enter a dark room with two doors. Do you go through door #1 or door #2?"
 
-whichdoor = raw_input('> ')
+    whichdoor = raw_input('> ')
 
-doors(whichdoor)
+    doors(whichdoor)
+
+def quit_or_restart():
+    print "Do you want to:"
+    print "1. Quit"
+    print "2. Restart"
+
+    quit_or_restart = raw_input('> ')
+
+    if quit_or_restart == "1":
+        quit()
+    elif quit_or_restart == "2":
+        start_game()
+    else:
+        quit() 
+
+start_game()
+
+quit_or_restart()
