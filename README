@@ -5,9 +5,14 @@ Command-line based and written in Python 2.7.
 This game is experimental only and is still in very early development. 
 More of a test of what I have learned and to expand upon my skills.
 
-You can download either the 'Experimental_Game.py file and run it with 
-'python Experimental_Game.py' from the command-line if you have Python installed.
+You can download the game from 
+http://code.google.com/p/phoenixilvas-experimental-game/downloads/list
 
-Otherwise you can download the 'Experimental_Game.exe' and play it that way.
+Just un-zip the file,
+double-click the '.exe'
+and play!
 
-You may edit or distribute this code in any way.
+Report any issues you may have via 
+http://github.com/Phoenixilva/Phoenixilvas_Experimental_Game/issues
+
+You MAY edit, change, or re-distribute this code in any way.
