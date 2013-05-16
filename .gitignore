@@ -140,7 +140,8 @@ csx
 AppPackages/
 
 # Others
-Experimental_Game/
+*.pyproj
+*.sln
 sql/
 *.Cache
 ClientBin/
