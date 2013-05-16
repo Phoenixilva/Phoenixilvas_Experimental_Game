@@ -1,4 +1,7 @@
-# Excercise 31
+# Phoenixilva's Experimental Nethack Style Game
+# v0.1.0-DEV
+# Created by Phoenixilva (Shay Rossignol)
+# All code is free to change and distribute
 
 def doors(door):
     if door == "1":
